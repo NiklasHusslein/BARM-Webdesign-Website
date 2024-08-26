@@ -1,22 +1,97 @@
-.tooltip {
-    position: relative;
-    display: inline-block;
-  }
+/*Base Farben
+
+nach Paletton
+darkest       RGB 020606
+dark          RGB 0C2423
+BASE:         RGB 164A48
+light         RGB 1D7C78
+ligthest      RGB 1FCBC4
+
+
+/* Reset */
+*{
+	padding:0;
+	margin:0;
+}
+h1{
+  font-size:2em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
   
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
+h2{
+  font-size:1.6em;
+  margin-bottom: 1em;
+}
   
-    /* Position the tooltip */
-    position: absolute;
-    z-index: 1;
-  }
+h3{
+  font-size:1.4em;
+  margin-bottom: 1em;
+}
+
+section{
+  padding-bottom: 15px;
+}
+
+/* Element-selectors */
+
+body {
+  background-color:#FFF;
+}
+
+a{
+  text-decoration:none;
+}
+a:link{
+  color:#fff;
+}
+a:visited{
+  color:#fff;
+}
+a:hover, a:focus{
+	color:#E7BC41;
+}
+a:active{
+  color:#FFF; 
+  background-color:#093A80;
+}
+
+/* Class-selectors */
+
+
+
+/* ID-selectors*/
+
+#wrapper{
+  width: 90%;
+  min-height: 90%;
+  margin-left: 5%;
+  /*background-color: #093A80;*/
+}
+
+#navbar{
+  background: #020606;
+  background: linear-gradient(90deg,#020606 0%, #091b1b 80%, #0C2423 100%);
   
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
+  
+  color: #FFF;
+  padding: 35px;
+  margin-bottom: 20px;
+}
+
+#navbar ul{
+  margin-left: 50%;
+  padding-top: 10px;
+}
+
+#navbar li{
+  list-style-type: none;
+  display: inline;
+  margin-right: 9em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#headline{
+  float: left;
+}
