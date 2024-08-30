@@ -28,18 +28,34 @@ h1 {
   background-repeat: no-repeat;
 }
 
-#niklas-link {
+#niklas-link,
+#sonja-link,
+#dimi-link,
+#lukas-link,
+#noah-link {
   position: absolute;
+}
+
+#niklas-link {
   height: 250px;
   width: 150px;
   top: 200px;
   left: 680px;
+  background-color: blue;
 }
 
 #sonja-link {
-  position: absolute;
   height: 250px;
   width: 150px;
   top: 200px;
-  left: 800px;
+  left: 850px;
+  background-color: red;
+}
+
+#dimi-link {
+  height: 150px;
+  width: 150px;
+  top: 475px;
+  left: 825px;
+  background-color: green;
 }
