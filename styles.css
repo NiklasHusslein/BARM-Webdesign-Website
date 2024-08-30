@@ -35,3 +35,11 @@ h1 {
   top: 200px;
   left: 680px;
 }
+
+#sonja-link {
+  position: absolute;
+  height: 250px;
+  width: 150px;
+  top: 200px;
+  left: 800px;
+}

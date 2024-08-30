@@ -1,0 +1,315 @@
+<!DOCTYPE html >
+<html lang="de">
+<!-- metadata -->
+<head>
+    <title>Toskana Reiseblog</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Toskana erleben: Erlebnisse und Tipps"/>
+    <meta name="keywords" content="Reise, Italien, Toskana"/>
+    <meta name="author" content="Sonja Jaron"/>
+    <meta name="robots" content="no-index"/>
+    <link href="assets/favicon.ico" rel="shortcut icon"/>
+    <link href="sonja_styles.css" rel="stylesheet" media=screen type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap" rel="stylesheet">
+</head>
+
+<!-- visible content -->
+<body>
+
+<div id="wrapper">
+    <div id="flag-green-box"></div>
+
+    <div id="flag-white-box">
+
+        <header>
+            <div id="header">
+
+                <nav>
+                    <div class="logo-container">
+                        <div id="italy"><img src="assets/italy.svg" width=50px height=50px alt="Landkarte Italiens">
+                        </div>
+                        <div id="logo"><a href="#content">Toskana erleben</a></div>
+                    </div>
+                    <ul>
+                        <li><a href="#architektur">Architektur</a></li>
+                        <li><a href="#landschaft">Landschaft</a></li>
+                        <li><a href="#kulinarik">Kulinarik</a></li>
+                        <li><a href="#kultur">Kultur</a></li>
+                        <li><a href="#tipps">Tipps</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <section id="content">
+
+            <article>
+                <h1>Ciao Ragazzi!</h1>
+                <div id="einleitung">
+                    <section>
+                        <div class="image-container">
+                            <img class="image-round" src="assets/einleitung/reisebuch_zum_reiseblog.jpeg"
+                                 width=300px height=300px alt="Reisebuch am Rathausplatz Bild">
+                            <p> "Willkommen bei meinem Reiseblog über das Reisen durch die wunderschöne Toskana. Hier
+                                möchte ich euch einen Geschmack der einzigartigen Atmosphäre Italiens vermitteln. Mit
+                                einem analogen Reiseführer in der Hand und der beeindruckenden Kulisse des
+                                Rathausplatzes in Florenz im Hintergrund, lade ich euch ein, mit mir die Magie und den
+                                Charme dieser bezaubernden Region zu entdecken. Lasst uns gemeinsam die historischen
+                                Schätze, die malerischen Landschaften und die kulinarischen Köstlichkeiten der Toskana
+                                erkunden. Buon viaggio!"
+                            </p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="image-container">
+                            <p> "Ciao, ich bin Sonja, die Reisende hinter diesem Blog! Mit einem Café in der Hand und
+                                einem Herzen, das für Italien schlägt, teile ich hier meine Leidenschaft für die
+                                wunderschöne Toskana. Ich liebe es, durch die verwinkelten Gassen zu schlendern,
+                                versteckte Schätze zu finden und die kleinen, feinen Momente des Lebens einzufangen –
+                                sei es der Duft von frisch gebrühtem Kaffee oder die unvergesslichen Ausblicke auf
+                                malerische Landschaften. Kommt mit auf meine Reise, lasst euch von meinen Geschichten
+                                und Bildern inspirieren und entdeckt Italien aus meiner Perspektive. Ich freue mich
+                                darauf, meine Eindrücke mit euch zu teilen!"
+                            </p>
+                            <img class="image-round" src="assets/einleitung/reisebloggerin.jpeg"
+                                 width=300px height=300px alt="Bild der Autorin des Reiseblogs">
+                        </div>
+                    </section>
+                </div>
+            </article>
+           <article id="architektur">
+                <h2>Architektur</h2>
+                <section id="dom_florenz">
+                    <h3>Dom in Florenz</h3>
+                    <img src="assets/Architektur/Dom_Florenz/Florenz_Dom_1.jpeg"
+                         width=512px height=512px alt="Florenz Dom Bild 1">
+                    <img src="assets/Architektur/Dom_Florenz/Florenz_Dom_2.jpeg"
+                         width=512px height=512px alt="Florenz Dom Bild 2">
+                    <img src="assets/Architektur/Dom_Florenz/Florenz_Dom_3.jpeg"
+                         width=512px height=512px alt="Florenz Dom Bild 3">
+                </section>
+            </article>
+             <!-- 
+            <article id="architektur">
+                <h2>Architektur</h2>
+                <section id="dom_florenz">
+                    <h3>Dom in Florenz</h3>
+                    <div class="carousel">
+                        <div class="carousel-inner">
+                            <img src="assets/Architektur/Dom_Florenz/Florenz_Dom_1.jpeg"
+                                 width=512px height=512px alt="Florenz Dom Bild 1">
+                            <img src="assets/Architektur/Dom_Florenz/Florenz_Dom_2.jpeg"
+                                 width=512px height=512px alt="Florenz Dom Bild 2">
+                            <img src="assets/Architektur/Dom_Florenz/Florenz_Dom_3.jpeg"
+                                 width=512px height=512px alt="Florenz Dom Bild 3">
+                        </div>
+                        <button class="prev">&#10094;</button>
+                        <button class="next">&#10095;</button>
+                    </div>
+                    <p> Text über den Dom in Florenz
+                    </p>
+                </section>
+            </article>
+
+            <script>
+                let currentIndex = 0;
+                const images = document.querySelectorAll('.carousel-inner img');
+                const totalImages = images.length;
+
+                document.querySelector('.next').addEventListener('click', function () {
+                    currentIndex = (currentIndex + 1) % totalImages;
+                    updateCarousel();
+                });
+
+                document.querySelector('.prev').addEventListener('click', function () {
+                    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                    updateCarousel();
+                });
+
+                function updateCarousel() {
+                    const offset = -currentIndex * 512; // 512px ist die Breite/Höhe des Bildes
+                    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}px)`;
+                }
+            </script> -->
+
+            <article id="landschaft" class="video">
+                <h2>Landschaft</h2>
+                <section>
+                    <p>Sonnenuntergang in Val d'Orcia</p>
+                    <!-- Poster-Eigenschaft für das "Thumbnail" Noch Einfügen!!-->
+                    <video controls poster="assets/video/sonnenuntergang_valdorcia/sonnenuntergang_valdorcia.jpeg"
+                        height="512" width="512">
+
+                        <source src="assets/video/sonnenuntergang_valdorcia/sonnenuntergang_valdorcia.mov"
+                                type="video/mp4" />
+                        <!-- mac mov ist in Wirklichkeit ein mp4 -->
+                        <source src="assets/video/sonnenuntergang_valdorcia/sonnenuntergang_valdorcia.ogv" 
+                                type="video/ogg" />
+                        <!-- ogv ist in Wirklichkeit ein ogg -->
+                        <source src="assets/video/sonnenuntergang_valdorcia/sonnenuntergang_valdorcia.webm" 
+                                type="video/webm" />
+                    </video>
+                </section>
+
+                <section>
+                    <p>Ruine in Volterra</p>
+                    <!-- Poster-Eigenschaft für das "Thumbnail" Noch Einfügen!!-->
+                    <video controls poster="assets/video/ruine_volterra/ruine_volterra.jpeg"
+                        height="512" width="512">
+
+                        <source src="assets/video/ruine_volterra/ruine_volterra.mov"
+                                type="video/mp4" />
+                        <!-- mac mov ist in Wirklichkeit ein mp4 -->
+                        <source src="assets/video/ruine_volterra/ruine_volterra.ogv" 
+                                type="video/ogg" />
+                        <!-- ogv ist in Wirklichkeit ein ogg -->
+                        <source src="assets/video/ruine_volterra/" 
+                                type="video/webm" />
+                    </video>
+                </section>
+
+                <section>
+                    <p>Aussicht auf die Landschaft in Pienza</p>
+                    <!-- Poster-Eigenschaft für das "Thumbnail" Noch Einfügen!!-->
+                    <video controls poster="assets/video/landschaft_pienza/landschaft_pienza.jpeg"
+                        height="512" width="512">
+
+                        <source src="assets/video/landschaft_pienza/landschaft_pienza.MOV"
+                                type="video/mp4" />
+                        <!-- mac mov ist in Wirklichkeit ein mp4 -->
+                        <source src="assets/video/landschaft_pienza/" 
+                                type="video/ogg" />
+                        <!-- ogv ist in Wirklichkeit ein ogg -->
+                        <source src="assets/video/landschaft_pienza/" 
+                                type="video/webm" />
+                    </video>
+                </section>
+            </article>
+
+            <article id="kulinarik">
+                <h2>Kulinarik</h2>
+                <p>Inhalt zum Thema Kulinarik...</p>
+<!--
+    <div id="pizzaContainer">
+        <canvas id="pizzaCanvas" width="400" height="400"></canvas>
+        <img id="image1" class="pizza-image" src="assets/architektur/dom_florenz/florenz_dom_1.jpeg" alt="Pepperoni 1">
+        <img id="image2" class="pizza-image" src="https://via.placeholder.com/150/00FF00/FFFFFF?text=Pepperoni2" alt="Pepperoni 2">
+        <img id="image3" class="pizza-image" src="https://via.placeholder.com/150/0000FF/FFFFFF?text=Pepperoni3" alt="Pepperoni 3">
+        <img id="image4" class="pizza-image" src="https://via.placeholder.com/150/FFFF00/FFFFFF?text=Pepperoni4" alt="Pepperoni 4">
+        <img id="image5" class="pizza-image" src="https://via.placeholder.com/150/FF00FF/FFFFFF?text=Pepperoni5" alt="Pepperoni 5">
+    </div>
+
+    <script>
+        const canvas = document.getElementById('pizzaCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Pizza Base (Crust)
+        ctx.beginPath();
+        ctx.arc(200, 200, 150, 0, 2 * Math.PI, false);
+        ctx.fillStyle = '#F5D6A4'; // Farbe des Pizzarands
+        ctx.fill();
+        ctx.closePath();
+
+        // Tomato Sauce
+        ctx.beginPath();
+        ctx.arc(200, 200, 130, 0, 2 * Math.PI, false);
+        ctx.fillStyle = '#FF6347'; // Tomatensauce
+        ctx.fill();
+        ctx.closePath();
+
+        // Cheese
+        ctx.beginPath();
+        ctx.arc(200, 200, 120, 0, 2 * Math.PI, false);
+        ctx.fillStyle = '#FFD700'; // Käsefarbe
+        ctx.fill();
+        ctx.closePath();
+
+        // Pepperoni Slices Data
+        const pepperonis = [
+            { x: 150, y: 150, radius: 20, imageId: 'image1' },
+            { x: 250, y: 150, radius: 20, imageId: 'image2' },
+            { x: 200, y: 250, radius: 20, imageId: 'image3' },
+            { x: 170, y: 240, radius: 20, imageId: 'image4' },
+            { x: 230, y: 240, radius: 20, imageId: 'image5' },
+        ];
+
+        // Draw Pepperoni Slices
+        function drawPepperoni(pepperoni) {
+            ctx.beginPath();
+            ctx.arc(pepperoni.x, pepperoni.y, pepperoni.radius, 0, 2 * Math.PI, false);
+            ctx.fillStyle = '#8B0000'; // Pepperoni
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        pepperonis.forEach(drawPepperoni);
+
+        // Add Click Event Listener
+        canvas.addEventListener('click', function(event) {
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            pepperonis.forEach(function(pepperoni) {
+                const distance = Math.sqrt((x - pepperoni.x) ** 2 + (y - pepperoni.y) ** 2);
+                if (distance <= pepperoni.radius) {
+                    const imgElement = document.getElementById(pepperoni.imageId);
+                    imgElement.style.display = imgElement.style.display === 'none' ? 'block' : 'none';
+                }
+            });
+        });
+    </script> -->
+
+
+
+            </article>
+
+            <article id="kultur">
+                <h2>Kultur</h2>
+                <section class="audio">
+                    <audio controls>
+                        wenn Sie das lesen können.... haben Sie keine Audio-Untertützung...
+
+                        <source src="assets/audio/straßenmusik_como.mp3"
+                                type="audio/mp3"/>
+
+                        <source src="assets/audio/straßenmusik_como.ogg"
+                                type="audio/ogg"/>
+
+                        <source src="assets/audio/straßenmusik_como.wav"
+                                type="audio/wav"/>
+
+                    </audio>
+
+                    <audio controls>
+                        <source src="assets/audio/straßenmusik_florenz.mp3"
+                                type="audio/mp3"/>
+
+                        <source src="assets/audio/straßenmusik_florenz.ogg"
+                                type="audio/ogg"/>
+
+                        <source src="assets/audio/straßenmusik_florenz.wav"
+                                type="audio/wav"/>
+                    </audio>
+                </section>
+            </article>
+
+            <article id="tipps">
+                <h2>Tipps</h2>
+                <p>Inhalt zum Thema Tipps...</p>
+                <a class="italy_button" href="assets/der_corso.pdf" download>
+                    <button>Download</button>
+                </a>
+            </article>
+        </section>    
+    </div>
+
+    <div id="flag-red-box"></div>
+</div>
+
+
+</body>
+</html>
