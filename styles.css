@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Akbar";
+  src: url("assets/fonts/akbar/akbar.ttf");
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  position: absolute;
+  margin: 0;
+  top: 40px;
+  left: 40px;
+  font-family: "Akbar", sans-serif;
+  font-size: 4rem;
+}
+
+#simpsons-couch {
+  position: relative;
+  background-image: url(assets/simpsons_couch_1800x1185.jpg);
+  width: 1920px;
+  height: 1080px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#niklas-link {
+  position: absolute;
+  height: 250px;
+  width: 150px;
+  top: 200px;
+  left: 680px;
+}
