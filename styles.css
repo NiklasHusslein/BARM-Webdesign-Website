@@ -9,6 +9,10 @@ body {
   padding: 0;
 }
 
+header {
+  display: none;
+}
+
 h1 {
   position: absolute;
   margin: 0;
@@ -34,28 +38,36 @@ h1 {
 #lukas-link,
 #noah-link {
   position: absolute;
+  height: 150px;
+  width: 150px;
 }
 
 #niklas-link {
-  height: 250px;
-  width: 150px;
-  top: 200px;
+  top: 300px;
   left: 680px;
   background-color: blue;
 }
 
 #sonja-link {
-  height: 250px;
-  width: 150px;
-  top: 200px;
+  top: 300px;
   left: 850px;
   background-color: red;
 }
 
 #dimi-link {
-  height: 150px;
-  width: 150px;
   top: 475px;
   left: 825px;
   background-color: green;
+}
+
+#lukas-link {
+  top: 450px;
+  left: 975px;
+  background-color: purple;
+}
+
+#noah-link {
+  top: 400px;
+  left: 1125px;
+  background-color: orange;
 }
