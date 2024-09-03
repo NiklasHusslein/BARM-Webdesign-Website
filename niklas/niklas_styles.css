@@ -12,6 +12,7 @@
 html {
   height: 100vh;
   scroll-padding-top: 74px;
+  scroll-behavior: smooth;
 }
 
 body {
