@@ -28,14 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // PONG MINIGAME
 
-padel1Y = padel2Y = 40;
+padel1Y = padel2Y = 80;
 padelWidth = 10;
 padelHeight = 100;
 ballX = ballY = 50;
 ballDimension = 6;
 velocityX = velocityY = 4;
 score1 = score2 = 0;
-aiSpeed = 2;
+aiSpeed = 3;
 
 window.onload = function () {
   canvas = document.getElementById("canvas");
@@ -52,6 +52,7 @@ window.onload = function () {
   });
 };
 
+// Reset ball and padels after a player scores
 function reset() {
   ballX = canvas.width / 2;
   ballY = canvas.height / 2;
@@ -112,7 +113,7 @@ function update() {
     ballDimension,
     ballDimension
   );
-  ctx.font = "32px Fustat";
+  ctx.font = "3rem Fustat";
   ctx.fillText(score1, 100, 100);
   ctx.fillText(score2, canvas.width - 100, 100);
 }

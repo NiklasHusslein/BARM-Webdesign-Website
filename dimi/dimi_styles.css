@@ -126,7 +126,7 @@ gap: 20px;
     }
 
     .outer-box{
-    /*width: 1850px;*/
+
     width: 1400px;
     height:500px;
     background-color:rgba(188, 0, 45, 1);
@@ -192,62 +192,91 @@ gap: 20px;
    line-height: 110%;
    }
 
-.land {
-    fill: black;
-    stroke: black;
-    stroke-width: 1px; / Randbreite /
-    transition: fill 0.3s; / Weicher Übergang bei Hover /
-  }
-  .land:hover {
-    fill: red;
-    stroke: BC002D;
-    cursor: pointer;
-  }
-  .kyoto{
+  #kyoto{
   fill: blue;
   stroke:black;
   stroke-width: 1px;
   transition: fill 0.3s;
   }
-  .kyoto:hover{
-  fill:red;
-  stroke:red;
+  #kyoto:hover{
+  fill:#BC002D;
+  stroke:black;
   cursor: pointer;
   }
-.osaka{
+#osaka{
   fill: blue;
   stroke:black;
   stroke-width: 1px;
   transition: fill 0.3s;
   }
-  .osaka:hover{
-  fill:red;
-  stroke:red;
+  #osaka:hover{
+  fill: #BC002D;
+  stroke:black;
   cursor: pointer;
   }
-  .nara{
+  #nara-button{
     fill: blue;
     stroke:black;
     stroke-width: 1px;
     transition: fill 0.3s;
     }
-    .nara:hover{
-    fill:red;
-    stroke:red;
+    #nara-button:hover{
+    fill:#BC002D;
+    stroke:black;
     cursor: pointer;
     }
-    .tokyo{
-      fill: black;
-      stroke:blue;
+
+      #tokyo{
+      fill: blue;
+      stroke:black;
       stroke-width: 1px;
       transition: fill 0.3s;
       }
-      .tokyo:hover{
-      fill:red;
-      stroke:red;
+      #tokyo:hover{
+      fill:#BC002D;
+      stroke:black;
       cursor: pointer;
       }
 
 .st0{fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;}
 	.st1{font-family:'Roboto-Regular';}
 	.st2{font-size:14px;}
+
+#nara-video{
+display:none;
+position: absolute;
+width: 300px;
+height: 300px;
+padding: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+border-radius: 50%;
+object-fit:cover;
+bottom:350px; /* Abstand vom Rand */
+right: 150px;
+}
+
+
+
+
+.test{
+display: flex;
+border: solid black 2px;
+position: relative;
+border-radius: 10px;
+width: 98%;
+margin: auto;
+	}
+#osaka-bild{
+display:none;
+position: absolute;
+width: 300px;
+height: 300px;
+padding: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+border-radius: 50%;
+object-fit:cover;
+bottom:600px;
+right: 80%;
+background-color: #BC002D;
+
+}
