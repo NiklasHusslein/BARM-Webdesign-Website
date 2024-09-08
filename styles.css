@@ -1,15 +1,14 @@
-@font-face {
-  font-family: "Akbar";
-  src: url("assets/fonts/akbar/akbar.ttf");
-}
-
 body {
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-header {
+#navigation {
   display: none;
 }
 
@@ -18,20 +17,18 @@ h1 {
   margin: 0;
   top: 10px;
   left: 100px;
-  font-family: "Akbar", sans-serif;
-  font-size: 4.5rem;
+  font-family: "Nerko One", Arial, serif;
+  font-size: 4.5em;
   text-align: center;
   line-height: 1;
 }
 
 #simpsons-couch {
   position: relative;
-  background-image: url(assets/pictures/simpsons_couch_1920x1080.png);
+  background: url(assets/pictures/simpsons_couch_1920x1080.png) no-repeat center
+    center;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #niklas-link,
