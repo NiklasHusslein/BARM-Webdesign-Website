@@ -13,27 +13,53 @@ ligthest      RGB 1FCBC4
 	padding:0;
 	margin:0;
 }
+
+/* Element-selectors */
 h1{
-  font-size:2em;
+  font-size:1.6em;
   margin-bottom: 1em;
   font-weight: bold;
+  font-family: "Manrope", sans-serif;
 }
   
 h2{
-  font-size:1.6em;
+  font-size:1.4em;
   margin-bottom: 1em;
+  font-family: "Manrope", sans-serif;
 }
   
 h3{
-  font-size:1.4em;
+  font-size:1.2em;
   margin-bottom: 1em;
+  font-family: "Manrope", sans-serif;
+}
+
+p{
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 0.4em;
 }
 
 section{
   padding-bottom: 15px;
 }
 
-/* Element-selectors */
+footer{
+  text-align: center;
+  padding: 1em;
+  background: #020606;
+  color: #FFF;
+  background: linear-gradient(270deg,#020606 0%, #091b1b 60%, #0C2423 100%);
+}
+
+footer img{
+  position: relative;
+  top: 6px;
+  right: 6px;
+}
+
+footer a:hover, a:focus{
+	color:#fff;
+}
 
 body {
   background-color:#FFF;
@@ -55,13 +81,28 @@ a:hover, a:focus{
 /* Class-selectors */
 
 .background{
-
+  background-color: #020606;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50px;
 }
+.background p{
+  color: #FFF;
+  text-align: center;
+}
+
 .foreground{
   background-color: #FFF;
-  padding: 2em 6em;
+  padding: 2em 12em;
 }
 
+.gridtext{
+  grid-area: Text;
+}
+.gridvideo{
+  grid-area: Video;
+}
 
 
 /* ID-selectors*/
@@ -81,24 +122,28 @@ a:hover, a:focus{
 #welcome h1{
   font-size: 4em;
   margin-bottom: 0.3em;
+  /*text-shadow: 1em 1em 1em 020606;*/
 }
 
 #startcontent{
-  
+  box-shadow: 0px -70px 300px #020606;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Text Text Text Video Video"; 
 }
 
 #backgroundImage1{
-  background-attachment: fixed;
   background-image: url("assets/pictures/HintergrundTitel_1747_1280.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 850px;
 }
 
 #wrapper{
   margin-top: 0;
   width: 100%;
-  min-height: 0;
+  min-height: 1108px; /*Muss am Ende noch raus*/
 }
 
 #navbar{
