@@ -1,247 +1,339 @@
+/* Gloable Stile */
 html {
-    scroll-padding-top: 92px;
+  scroll-padding-top: 92px;
+  scroll-behavior: smooth;
+}
+
+head,
+body {
+  overflow-x: hidden;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Italiana', cursive;
+  margin: 0;
+  padding: 0;
+  font-family: "Italiana", cursive;
 }
 
+p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Struktur-Elemente */
 #wrapper {
-    display: flex;
-    width: 100vw;
+  display: flex;
+  width: 100vw;
 }
 
 #flag-green-box {
-    width: 15%;
-    background-color: #008C45;
+  width: 15%;
+  background-color: #008c45;
 }
 
 #flag-white-box {
-    width: 70%;
-    padding-top: 70.5px;
+  width: 70%;
 }
 
 #flag-red-box {
-    width: 15%;
-    background-color: #CD212A;
+  width: 15%;
+  background-color: #cd212a;
 }
 
+#content {
+  padding-inline: 40px;
+  margin-top: 92px;
+  margin-bottom: 40px;
+}
+
+/* Header und Navigation */
 #header {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 70%;
-    background-color: white;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 70%;
+  left: 15%;
+  background-color: white;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+  z-index: 100; /* Einmalige Verwendung, sodass die Elemente mit Transform-Eigenschaft im Scroll-Event nicht über die Nav-Leiste hovern. */
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-#italy {
-    padding: 5px 20px;
+#logo {
+  padding: 5px 20px;
 }
 
-#logo a {
-    font-size: 3em;
-    font-weight: bold;
-    margin-right: auto;
-    font-family: 'Italianno', cursive;
-    text-decoration: none;
-    color: inherit;
+#titel a {
+  font-size: 3rem;
+  margin-right: auto;
+  font-family: "Italianno", cursive;
+  text-decoration: none; /* Entfernung der Standard-Unterstreichung bei Links */
+  color: inherit;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 10px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
 }
 
 nav ul li {
-    display: inline-block;
+  display: inline-block;
 }
 
-nav ul li#logo {
-    font-size: 1.8em;
-    color: black;
+nav ul li #titel {
+  font-size: 1.8rem;
+  color: #000;
 }
 
 nav a {
-    text-decoration: none;
-    font-size: 1.3em;
-    color: grey;
-    font-weight: bold;
-    padding: 5px 15px;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #555;
+  font-weight: bold;
+  padding: 5px 15px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #555;
-    text-decoration: underline;
+  color: #000;
+  text-decoration: underline;
 }
 
-article {
-    padding: 20px;
+/* article styles */
+article h1,
+article h2 {
+  text-shadow: #aaa 2px 2px 4px;
+  margin: 40px 0;
 }
 
 article h1 {
-    font-size: 3rem;
-    margin: 20px;
-    font-family: 'Italiana', cursive;
-    text-shadow: #aaa 2px 2px 4px;
+  font-size: 3rem;
 }
 
 article h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-shadow: #aaa 2px 2px 4px;
+  font-size: 2.5rem;
 }
 
-article p {
-    font-size: 1.2em;
-    line-height: 1.6;
+article h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: underline;
 }
 
-.image-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 350px;
-    flex: 1;
-    padding: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    shape-outside: circle(50%);
+.container-style {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }
 
-.image-container p {
-    margin: 20px;
-    text-align: justify;
+/* article: einleitung */
+.einleitung-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  flex: 1;
+  padding: 15px;
 }
 
-img {
-    object-fit: cover;
-    object-position: center;
+.einleitung-container p {
+  margin: 20px;
+  text-align: justify;
 }
 
 .image-round {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 #einleitung {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.video {
-
-}
- /* Pizza
-        #pizzaContainer {
-            position: relative;
-            width: 400px;
-            height: 400px;
-            margin: auto;
-        }
-
-        #pizzaCanvas {
-            border: 1px solid #d3d3d3;
-        }
-
-        .pizza-image {
-            position: absolute;
-            display: none;
-            width: 150px;
-            height: 150px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            background-color: white;
-        }
-
-        #image1 { top: 10px; left: -160px; }
-        #image2 { top: 10px; right: -160px; }
-        #image3 { bottom: 10px; left: -160px; }
-        #image4 { bottom: 10px; right: -160px; }
-        #image5 { top: 130px; right: -160px; }
-*/
-
-/* Bilderslider
-.carousel {
-    position: relative;
-    width: 512px;
-    height: 512px;
-    margin: auto;
-    overflow: hidden;
-    background-color: #f3f3f3;
+/* article: architektur */
+.architektur-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 15px;
+  height: 350px;
 }
 
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.architektur-container img {
+  border-radius: 15px;
 }
 
-.carousel-inner img {
-    width: 512px;
-    height: 512px;
-    object-fit: cover;
-    flex-shrink: 0;
+.architektur-container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 100;
+#kirchen {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-button.prev {
-    left: 0;
+/* article: landschaft */
+#landschaft-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
 }
 
-button.next {
-    right: 0;
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  height: 750px;
+  width: 400px;
+  transition: transform 0.5s ease;
 }
-*/
 
-.italy_button {
-        background: linear-gradient(to right, #008C45 33%, #F4F5F0 33%, #F4F5F0 66%, #CD212A 66%);
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-        font-weight: bold;
-    }
+#landschaft-container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
 
-    .italy_button:hover {
-        opacity: 0.8;
-    }
+/* article: kultur */
+/* section: audio */
+audio {
+  width: 100%;
+  max-width: 300px;
+}
 
+.audio-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  width: 600px;
+  padding: 20px;
+}
+
+.audio-info {
+  flex: 1;
+  margin-top: 20px;
+}
+
+#audio-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.instrument-icon {
+  margin-left: 40px;
+  transition: 0.3s ease;
+}
+
+.instrument-icon:hover {
+  transform: scale(1.1);
+}
+
+/* section: PDF */
+.download-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.download-button {
+  display: inline-block;
+  color: #000;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #ffafb3;
+}
+
+.download-button:hover,
+.grid-item:hover {
+  transform: scale(1.02);
+}
+
+/* article: kulinarik */
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img {
+  width: 100%; /* Füllt die Grid-Zelle vollständig */
+  height: 100%; /* Bild bleibt quadratisch */
+  object-fit: cover; /* Schneidet das Bild zu, um es quadratisch zu halten */
+  border-radius: 10px; /* Leichte Abrundung der Bilder */
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Drei Spalten mit gleichmäßiger Verteilung */
+  grid-template-rows: repeat(
+    3,
+    1fr
+  ); /* Drei Zeilen mit gleichmäßiger Verteilung */
+  gap: 20px; /* Abstand zwischen den Zellen */
+  width: 100%; /* Nimmt die gesamte Breite des parent containers ein */
+  margin: 0 auto; /* Zentriert den Grid-Container */
+  box-sizing: border-box; /* Verhindert, dass das Padding den Inhalt überlappt */
+}
+/* Canvas */
+#pizza-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pizzaCanvas {
+  width: 100%; /* Das Canvas passt sich der Grid-Item-Größe an */
+  height: 100%; /* Die Höhe wird proportional zur Breite angepasst */
+}
+
+#pizza-container:hover {
+  animation: spin 2s linear infinite; /* Endlose 360-Grad-Drehung */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
