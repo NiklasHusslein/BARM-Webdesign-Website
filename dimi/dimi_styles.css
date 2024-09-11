@@ -1,282 +1,311 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
+/* Der Header wird fixiert, damit er immer oben bleibt, wenn der Benutzer scrollt.
+   Er nimmt die gesamte Breite ein und hat einen sehr hohen z-index, damit er über
+   anderen Elementen liegt. */
 header {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 30px;
-    height: 100px;
-    font-size: 2rem;
-}
-
+/* Die .logo-Klasse verwendet Flexbox, um die Inhalte auszurichten.
+   Es gibt einen Abstand von 20px zwischen den Elementen innerhalb des Logos. */
 .logo {
-display: flex;
-align-items: center;
-gap: 20px;
+  display: flex;
+  align-items: center; /* Zentriert die Elemente vertikal */
+  gap: 20px; /* Abstand zwischen den Kind-Elementen */
 }
 
-#wrapper {
-    padding-top: 160px;
-}
-
+/* Links innerhalb des Logos sind weiß, fett und ohne Unterstreichung.
+   Die Schriftgröße ist auf 2rem gesetzt, um sie groß darzustellen. */
 .logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* Die Navbar verwendet ebenfalls Flexbox, um den Platz zwischen den Elementen
+   gleichmäßig zu verteilen. Sie ist dunkelgrau (#333), hat 30px Padding,
+   eine feste Höhe von 100px und eine große Schriftgröße. */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Verteilt die Kinder mit Platz dazwischen */
+  align-items: center; /* Zentriert die Elemente vertikal */
+  background-color: #333; /* Hintergrundfarbe */
+  padding: 30px; /* Innenabstand */
+  height: 100px; /* Höhe der Navbar */
+  font-size: 2rem; /* Schriftgröße */
 }
 
+/* Die Navigationslinks sind in einer flexiblen Liste organisiert, ohne Listenpunkte.
+   Die Links sind zentriert und haben einen Abstand von 5px zwischen den Elementen. */
 .nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+  list-style: none; /* Entfernt Aufzählungszeichen */
+  display: flex; /* Flexbox zur horizontalen Anordnung */
+  margin: 0; /* Kein Außenabstand */
+  padding: 0; /* Kein Innenabstand */
+  background-color: #333; /* Gleiche Hintergrundfarbe wie die Navbar */
+  align-items: center; /* Zentriert die Elemente vertikal */
+  gap: 5px; /* Abstand zwischen den Listenelementen */
 }
-
+/* Fügt jedem Listenelement innerhalb der Navigation links einen 30px Abstand hinzu. */
 .nav-links li {
-    margin-left: 30px;
+  margin-left: 30px;
 }
-
+/* Die Links in der Navigation sind weiß und ohne Unterstreichung.
+   Ein sanfter Übergang wird beim Farbwechsel (z.B. beim Hover) hinzugefügt. */
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Sanfter Übergang der Farbe über 0.3 Sekunden */
 }
 
+/* Zusätzlicher Stil für Links in der Navigation, um sie größer und mit Abstand
+   oben und unten zu gestalten. */
+.nav-links li a {
+  margin: 20px 0; /* Abstand oben und unten */
+  font-size: 2rem; /* Große Schriftgröße */
+}
+/* Wenn die Navbar die Klasse .active hat, werden die Navigationslinks sichtbar
+   gemacht (z.B. bei mobilen Menüs). */
+.navbar.active .nav-links {
+  display: flex;
+}
+/* Beim Überfahren eines Links in der Navigation wird die Textfarbe zu einem
+   Rotton (#BC002D) geändert. */
 .nav-links a:hover {
-    color: #BC002D;
+  color: #bc002d;
+}
+/* Entfernt alle Standard-Außenabstände des Body-Elements und
+   setzt die Schriftart auf Arial oder, falls Arial nicht verfügbar ist,
+   auf eine generische serifenlose Schriftart. */
+body {
+  margin: 0; /* Entfernt den Standard-Außenabstand des Browsers */
+  font-family: Arial, sans-serif; /* Setzt die Schriftart */
+}
+/* Fügt dem #wrapper-Element einen oberen Innenabstand von 160px hinzu.
+   Dies sorgt dafür, dass der Inhalt unterhalb von fixierten Elementen
+   (wie einem Header) beginnt und nicht davon überdeckt wird. */
+#wrapper {
+  padding-top: 160px; /* Innenabstand oben, um Platz für den fixierten Header zu schaffen */
 }
 
+#start {
+  position: relative;
+}
+
+/* .text-box: Ein absolut positioniertes Element, das sowohl horizontal
+   als auch vertikal zentriert ist. Es hat einen halbtransparenten schwarzen
+   Hintergrund, weißen Text und abgerundete Ecken. */
+.text-box {
+  position: absolute; /* Absolut positioniert innerhalb des übergeordneten Elements */
+  top: 50%; /* Vertikale Mitte des übergeordneten Elements */
+  left: 50%; /* Horizontale Mitte des übergeordneten Elements */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Zentriert das Element horizontal und vertikal (mittig) */
+  background-color: rgba(0, 0, 0, 0.5); /* Schwarze Box mit 50% Transparenz */
+  color: white; /* Weißer Text */
+  padding: 20px; /* Innenabstand für mehr Platz um den Text */
+  font-size: 3rem; /* Große Schriftgröße */
+  border-radius: 10px; /* Abgerundete Ecken */
+  text-align: center; /* Zentriert den Text innerhalb der Box */
+}
+/* #staedte-container: Ein flexibler Container, der seine Kinder in einer
+   Spalte anordnet und diese zentriert. */
+#staedte-container {
+  display: flex; /* Flexbox für die Anordnung der Kinder */
+  flex-direction: column; /* Anordnung der Kinder in einer Spalte */
+  align-items: center; /* Zentriert die Kinder horizontal */
+}
+/* .carousel: Ein relativ positioniertes Element mit begrenzter Breite und
+   abgerundeten Ecken, das den Überlauf versteckt, um den Inhalt zu beschneiden. */
+.carousel {
+  position: relative; /* Ermöglicht die absolute Positionierung von Kindern */
+  width: 80%; /* Nimmt 80% der Breite des übergeordneten Elements ein */
+  max-width: 302px; /* Maximale Breite von 302px */
+  overflow: hidden; /* Versteckt den Überlauf */
+  border-radius: 20px; /* Abgerundete Ecken mit einem Radius von 20px */
+}
+/* .carousel-inner: Ein flexibler Container, der die Carousel-Items horizontal
+   anordnet und einen Übergangseffekt für die Animation bietet. */
 .carousel-inner {
-        display: flex;
-    }
-
-.nav-links {
-        display: flex;
-        background-color: #333;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .nav-links li a {
-        margin: 20px 0;
-        font-size: 2rem;
-    }
-
-    .navbar.active .nav-links {
-        display: flex;
-    }
-
-     .carousel {
-        position: relative;
-        width: 80%;
-        max-width: 302px;
-        overflow: hidden;
-        border-radius: 20px;
-       /* margin:20px; */
-    }
-
-   .carousel-inner {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-    }
-
-   .carousel-item {
-        min-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .carousel-item img {
-        width: 100%;
-    }
-    button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color:rgba(0, 0, 0, 0.5);
-    border:none;
-    padding 10px;
-    cursor: pointer;
-    color: white;
-    font-size:18px;
-    }
-
-    button.prev {
-        left: 10px;
-    }
-
-    button.next {
-        right: 10px;
-    }
-
-    #staedte-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .outer-box{
-
-    width: 1400px;
-    height:500px;
-    background-color:rgba(188, 0, 45, 1);
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-    margin:20px;
-    border-radius: 20px;
-   /* border: 2px solid black; */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 20px rgba(0, 0, 0, 0.25);
-    }
-    .inner-box{
-    width: 347px;
-    height:410px;
-    margin: 30px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: flex-end;
-    }
-    .inner-box2{
-    width: 900px;
-    height:410px;
-    background-color: white;
-    margin: 70px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 20px rgba(0, 0, 0, 0.25);
-    }
-    .inner-box3{
-        width: 700px;
-        height:300px;
-        background-color: white;
-        margin: 55px;
-        border-radius: 20px;
-
-        }
-    h1{
-    font-size:96px;
-    position:center;
-    }
-    h2{
-    font-size: 48px;
-    margin-bottom: 15px;
-    }
-    h1,h2{
-    font-weight:bold;
-    }
-
-   .text-box {
-               position: absolute;
-               top: 50%;
-               left: 50%;
-               transform: translate(-50%, -50%); /* Zentriert das Element horizontal und vertikal */
-               background-color: rgba(0, 0, 0, 0.5); /* Schwarze Box mit 50% Transparenz */
-               color: white;
-               padding: 20px;
-               font-size: 3rem;
-               border-radius: 10px; /* Abgerundete Ecken */
-               text-align: center;
-           }
-
-   p{
-   font-size: 24px;
-   line-height: 110%;
-   }
-
-  #kyoto{
-  fill: blue;
-  stroke:black;
-  stroke-width: 1px;
-  transition: fill 0.3s;
-  }
-  #kyoto:hover{
-  fill:#BC002D;
-  stroke:black;
-  cursor: pointer;
-  }
-#osaka{
-  fill: blue;
-  stroke:black;
-  stroke-width: 1px;
-  transition: fill 0.3s;
-  }
-  #osaka:hover{
-  fill: #BC002D;
-  stroke:black;
-  cursor: pointer;
-  }
-  #nara-button{
-    fill: blue;
-    stroke:black;
-    stroke-width: 1px;
-    transition: fill 0.3s;
-    }
-    #nara-button:hover{
-    fill:#BC002D;
-    stroke:black;
-    cursor: pointer;
-    }
-
-      #tokyo{
-      fill: blue;
-      stroke:black;
-      stroke-width: 1px;
-      transition: fill 0.3s;
-      }
-      #tokyo:hover{
-      fill:#BC002D;
-      stroke:black;
-      cursor: pointer;
-      }
-
-.st0{fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;}
-	.st1{font-family:'Roboto-Regular';}
-	.st2{font-size:14px;}
-
-#nara-video{
-display:none;
-position: absolute;
-width: 300px;
-height: 300px;
-padding: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-border-radius: 50%;
-object-fit:cover;
-bottom:350px; /* Abstand vom Rand */
-right: 150px;
+  display: flex; /* Flexbox zur horizontalen Anordnung der Carousel-Items */
+  transition: transform 0.5s ease-in-out; /* Übergang für flüssige Bewegungen beim Scrollen */
+}
+/* .carousel-item: Ein flexibler Artikel im Carousel, der immer die volle Breite
+   des Carousels einnimmt. */
+.carousel-item {
+  min-width: 100%; /* Nimmt mindestens die volle Breite des übergeordneten Elements ein */
+  box-sizing: border-box; /* Inklusive Padding und Border zur Gesamtbreite */
+}
+/* .carousel-item img: Bilder innerhalb der Carousel-Items nehmen die gesamte Breite
+   ihres Containers ein. */
+.carousel-item img {
+  width: 100%; /* Bilder skalieren auf die volle Breite des Carousel-Items */
+}
+/* button: Absolut positionierte Buttons innerhalb des Carousels für Navigation.
+   Sie sind vertikal zentriert, halbtransparent und haben keine Ränder. */
+button {
+  position: absolute; /* Absolut positioniert relativ zum Carousel */
+  top: 50%; /* Vertikal zentriert in der Mitte des Carousels */
+  transform: translateY(-50%); /* Perfekte vertikale Zentrierung */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Halbtransparenter schwarzer Hintergrund */
+  border: none; /* Keine Rahmen */
+  padding: 10px; /* Innenabstand für größere Klickfläche */
+  cursor: pointer; /* Zeigt den Mauszeiger als Hand an */
+  color: white; /* Weißer Text */
+}
+/* .prev und .next: Positionieren die Navigationsbuttons links und rechts
+   innerhalb des Carousels. */
+button.prev {
+  left: 10px; /* Positioniert den "Vorherigen"-Button 10px vom linken Rand */
 }
 
+button.next {
+  right: 10px; /* Positioniert den "Nächsten"-Button 10px vom rechten Rand */
+}
+/* .outer-box, .inner-box, .inner-box2, .inner-box3:
+   Alle diese Boxen haben abgerundete Ecken und verwenden Flexbox. */
+.outer-box,
+.inner-box,
+.inner-box2 {
+  border-radius: 20px; /* Abgerundete Ecken mit einem Radius von 20px */
+  display: flex;
+}
+/* .outer-box und .inner-box2:
+   Diese Boxen haben einen Schatteneffekt mit zwei Ebenen, um Tiefe zu erzeugen. */
+.outer-box,
+.inner-box2 {
+  /* Schattierung für 3D-Effekt */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25), 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+/* .outer-box:
+   Große Box mit fester Breite und Höhe, einer spezifischen Hintergrundfarbe,
+   zentrierten und gleichmäßig verteilten Kind-Elementen und einem Außenabstand. */
+.outer-box {
+  width: 1400px; /* Breite der Box */
+  height: 500px; /* Höhe der Box */
+  background-color: rgba(188, 0, 45, 1); /* Hintergrundfarbe */
+  justify-content: space-between; /* Verteilung der Kinder mit Platz dazwischen */
+  align-items: center; /* Vertikale Zentrierung der Kinder */
+  margin: 20px; /* Außenabstand */
+}
+/* .inner-box:
+Kleinere Box mit festgelegter Breite und Höhe, die den Inhalt am Ende
+der Box ausrichtet und einen Außenabstand hat. */
+.inner-box {
+  width: 347px; /* Breite der Box */
+  height: 410px; /* Höhe der Box */
+  margin: 30px; /* Außenabstand */
+  justify-content: flex-end; /* Richtet den Inhalt am Ende der Box aus */
+}
+/* .inner-box2:
+       Größere Box mit weißem Hintergrund, Flexbox-Ausrichtung und Schattierung,
+       um dem Layout Konsistenz zu verleihen. */
+.inner-box2 {
+  width: 900px; /* Breite der Box */
+  height: 410px; /* Höhe der Box */
+  background-color: white; /* Hintergrundfarbe */
+  margin: 70px; /* Außenabstand */
+}
+/* .inner-box3:
+       Eine weitere Box mit weißem Hintergrund und mittlerer Größe, um zusätzlichen
+       Inhalt zu beherbergen, mit einem moderaten Außenabstand. */
+.inner-box3 {
+  margin: 0 20px 20px 20px;
+  background-color: white; /* Hintergrundfarbe */
+  border-radius: 20px;
+}
+/* h1: Stil für Überschriften mit großer Schriftgröße und fettgedrucktem Text. */
+h1 {
+  font-size: 4rem; /* Große Schriftgröße */
+  margin-bottom: 10px; /* Abstand nach unten */
+  font-weight: bold; /* Fettschrift */
+}
+/* p: Stil für Absätze mit großer Schriftgröße und geringem Zeilenabstand. */
+p {
+  font-size: 1.65rem; /* Große Schriftgröße */
+  line-height: 110%; /* Geringer Zeilenabstand */
+}
+/* .st0: Ein SVG-Stil, der keine Füllung hat, eine dünne schwarze Linie mit
+   abgerundeten Enden und Ecken, passend für Umrisse oder detaillierte Linien. */
+.st0 {
+  fill: none; /* Keine Füllfarbe */
+  stroke: #000000; /* Schwarze Linie */
+  stroke-width: 0.5; /* Dünne Linienbreite */
+  stroke-linecap: round; /* Abgerundete Linienenden */
+  stroke-linejoin: round; /* Abgerundete Eckverbindungen */
+}
 
-
-
-.test{
-display: flex;
-border: solid black 2px;
-position: relative;
-border-radius: 10px;
-width: 98%;
-margin: auto;
-	}
-#osaka-bild{
-display:none;
-position: absolute;
-width: 300px;
-height: 300px;
-padding: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-border-radius: 50%;
-object-fit:cover;
-bottom:600px;
-right: 80%;
-background-color: #BC002D;
-
+/* .japan-karte: Eine Box für eine Japan-Karte, die flexibles Layout nutzt,
+   mit einem schwarzen Rand, abgerundeten Ecken und einer relativen Positionierung. */
+.japan-karte {
+  display: flex; /* Flexbox zur Anordnung */
+  border: solid black 2px; /* Schwarzer Rahmen */
+  position: relative; /* Positioniert relativ zu übergeordneten Elementen */
+  border-radius: 10px; /* Abgerundete Ecken */
+  width: 98%; /* Breite der Karte */
+  margin: auto; /* Zentriert die Karte */
+  bottom: 5px; /* Positioniert 5px vom unteren Rand */
+}
+/* Hover-Effekte für interaktive Bereiche auf der Karte:
+   Ändert die Füllfarbe auf Rot und setzt einen schwarzen Rand,
+   außerdem zeigt der Mauszeiger eine Hand (Pointer). */
+#tokyo:hover,
+#kyoto:hover,
+#osaka:hover,
+#nara-button:hover {
+  fill: #bc002d; /* Rote Füllfarbe beim Hovern */
+  stroke: black; /* Schwarzer Rand */
+  cursor: pointer; /* Zeigt den Mauszeiger als Hand */
+}
+/* Standardzustand für interaktive Bereiche auf der Karte:
+   Blaue Füllung mit schwarzem Rand und sanftem Übergangseffekt für Farbwechsel. */
+#tokyo,
+#kyoto,
+#osaka,
+#nara-button {
+  fill: blue; /* Blaue Füllfarbe */
+  stroke: black; /* Schwarzer Rand */
+  stroke-width: 1px; /* Linienbreite */
+  transition: fill 0.3s; /* Sanfter Übergang der Füllfarbe */
+}
+/* Versteckte Bilder/Videos, die bei Interaktionen erscheinen,
+   mit spezifischer Positionierung, Größe und Stil für optische Attraktivität. */
+#tokyo-bild,
+#kyoto-bild,
+#osaka-bild,
+#nara-video {
+  display: none; /* Standardmäßig ausgeblendet */
+  position: absolute; /* Absolut positioniert relativ zum übergeordneten Element */
+  width: 300px; /* Größe der Bilder/Videos */
+  height: 300px; /* Höhe der Bilder/Videos */
+  padding: 10px; /* Innenabstand */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Schatten für Tiefe */
+  border-radius: 50%; /* Runde Form */
+  object-fit: cover; /* Bilder füllen den verfügbaren Raum */
+  background-color: #bc002d; /* Roter Hintergrund */
+}
+/* Positioniert spezifische Bilder/Videos an bestimmten Stellen auf der Karte,
+   um sie sinnvoll neben den interaktiven Bereichen zu platzieren. */
+#tokyo-bild {
+  bottom: 45%; /* Abstand vom unteren Rand */
+  right: 18%; /* Abstand vom unteren Rand */
+}
+#kyoto-bild {
+  bottom: 45%; /* Abstand vom unteren Rand */
+  right: 50%; /* Abstand vom unteren Rand */
+}
+#osaka-bild {
+  bottom: 20%; /* Abstand vom unteren Rand */
+  right: 80%; /* Abstand vom unteren Rand */
+}
+#nara-video {
+  bottom: 5%; /* Abstand vom unteren Rand */
+  right: 10%; /* Abstand vom unteren Rand */
 }
