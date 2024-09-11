@@ -125,8 +125,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   // Ein neues Audio-Objekt erstellen und die Audiodatei "tokyo_audio.m4a" aus dem Verzeichnis "assets/audio" laden
   const audio = new Audio(
-    "assets/audio/tokyo_audio.m4a",
     "assets/audio/tokyo_audio.mp3",
+    "assets/audio/tokyo_audio.ogv",
     "assets/audio/tokyo_audio.wav"
   );
   // Referenz zum Button-Element mit der ID "tokyo-button" abrufen
