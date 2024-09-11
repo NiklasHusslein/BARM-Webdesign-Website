@@ -1,3 +1,7 @@
+html{
+  scroll-padding-top: 160px;
+}
+
 /* Der Header wird fixiert, damit er immer oben bleibt, wenn der Benutzer scrollt.
    Er nimmt die gesamte Breite ein und hat einen sehr hohen z-index, damit er über
    anderen Elementen liegt. */
@@ -90,6 +94,10 @@ body {
 
 #start {
   position: relative;
+  background-image: url("assets/images/aufmacher_japan.webp");
+  min-height: 39.2vw;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* .text-box: Ein absolut positioniertes Element, das sowohl horizontal

@@ -80,7 +80,7 @@ a:hover, a:focus{
 	color:#1FCBC4;
 }
 
-nav {
+nav { /*position eher Absolut für Viewport*/
   background: #020606;
   background: linear-gradient(90deg,#020606 0%, #091b1b 60%, #0C2423 100%);
   color: #FFF;
@@ -109,7 +109,7 @@ nav li{
   background-attachment: fixed; 
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100px;
+  min-height: 100px; /*VW anpassen*/
 }
 .background p{
   color: #FFF;
