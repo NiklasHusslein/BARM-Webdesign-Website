@@ -7,36 +7,40 @@ BASE:         RGB 164A48
 light         RGB 1D7C78
 ligthest      RGB 1FCBC4
 
-
 /* Reset */
 *{
 	padding:0;
 	margin:0;
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 106px;
+}
 
 /* Element-selectors */
+h1, h2, h3, p, label, a, input{
+  font-family: "Manrope", sans-serif;
+}
+
+
 h1{
   font-size:1.6em;
   margin-bottom: 1em;
   font-weight: bold;
-  font-family: "Manrope", sans-serif;
 }
   
 h2{
   font-size:1.4em;
   margin-bottom: 1em;
-  font-family: "Manrope", sans-serif;
 }
   
 h3{
   font-size:1.2em;
   margin-bottom: 1em;
-  font-family: "Manrope", sans-serif;
 }
 
 p{
   font-size: 1.1em;
-  font-family: "Manrope", sans-serif;
   line-height: 1.8em;
   margin-bottom: 0.4em;
 }
@@ -59,9 +63,6 @@ footer img{
   right: 6px;
 }
 
-footer a:hover, a:focus{
-	color:#fff;
-}
 
 body {
   background-color:#FFF;
@@ -76,11 +77,9 @@ a:link{
 a:visited{
   color:#fff;
 }
-a:hover, a:focus{
-	color:#1FCBC4;
-}
 
-nav { /*position eher Absolut für Viewport*/
+
+nav { 
   background: #020606;
   background: linear-gradient(90deg,#020606 0%, #091b1b 60%, #0C2423 100%);
   color: #FFF;
@@ -103,6 +102,10 @@ nav li{
   font-size: 1.2em;
   font-weight: bold;
 }
+
+
+
+
 /* Class-selectors */
 
 .background{
@@ -118,99 +121,167 @@ nav li{
 
 .foreground{
   background-color: rgba(255, 255, 255, 1);
-  padding: 2em 12em;
-  box-shadow: 0px -70px 300px #000;
-  box-shadow: 0px 70px 300px #000;
+  padding: 2% 6%;
+  box-shadow: 0px 0 200px #000;
   border-radius: 5px;
   text-align: center;
+}
+
+.foreground h1 {
+  font-size: 2.4em;
+}
+.foreground h2 {
+  font-size: 1.6em;
 }
 
 .GallerieGridBild{
   box-shadow: 0px 0px 10px #000;
   border-radius: 10px;
-  padding: 2%;
+  padding: 8px;
   
 }
 
-.GallerieGridBild img{
-  width:98%;
-  margin-top: 1%;
-  margin-bottom: 2%;
-  height: 98%;
+.GallerieGridBild figcaption{
+  font-size: 2.1em;
+  font-weight: 550;
+  font-family: "Kolker Brush", cursive;
 }
 
-.GallerieGridBild figcaption{
-  font-size: 1.2em;
-  font-weight: bold;
+.FormInput{
+  width: 100%;
+  height: 2.3em;
+  border-radius: 4px;
+  border: #6d6a6a solid 1px;
+  box-shadow: 0 0 2px #6d6a6a;
+}
+
+.GallerieBildgroup{
+  max-width: 20%;
+  margin: 0.7%;
+  transition: transform 2s;
+}
+.GallerieBildgroup :hover{
+  background-color: #FFF;
+  transform: scale(1.1);
+}
+.GallerieBildgroup img:hover{
+  transform: scale(1);
+}
+
+.GallerieBildgroup img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* ID-selectors*/
-#Gallerie{
+
+
+#FormAnliegen{
+  height: 5em;
+  resize: none;
+}
+
+
+#foregroundform{
   min-height: 400px;
 }
 
-#BilderGallerieGrid {  
+#Kontaktformular {  
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20% 2%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10% 0px;
   grid-auto-flow: row;
-  justify-content: center;
+  justify-content: start;
   justify-items: stretch;
-  align-items: stretch;
   grid-template-areas:
-    "Bild1 Bild2 Bild3 Bild4"
-    "Bild5 Bild6 Bild7 Bild8"
-    "Bild9 Bild10 Bild11 Bild12";
+    "LabelName InputName InputName"
+    "LabelMail InputMail InputMail"
+    "LabelDatum InputDatum InputDatum"
+    "LabelAnliegen InputAnliegen InputAnliegen"
+    "Buttons Buttons Buttons";
+  align-items: center;
+  font-size: larger;
+  text-align: left;
+  font-weight: bold;
 }
 
-#Bild1 { 
-  grid-area: Bild1; 
+#Kontaktaufnahme{
+  border: #6d6a6a solid 1px;
+  box-shadow: 0 0 2px #6d6a6a;
+  border-radius: 10px;
+  background: radial-gradient(circle,  #1D7C78 0%, #164A48 70%, #0C2423 100%);
+  color: #FFF;
+  width: 300px;
+  height: 50px;
+  font-size: 1.3em;
 }
 
-#Bild2 { 
-  grid-area: Bild2; 
+#LabelName { 
+  grid-area: LabelName; 
 }
 
-#Bild3 { 
-  grid-area: Bild3; 
+#DownloadPDF{
+  margin-top: 30px;
 }
 
-#Bild4 { 
-  grid-area: Bild4; 
+
+
+#InputName { 
+  grid-area: InputName; 
 }
 
-#Bild5 { 
-  grid-area: Bild5; 
+#LabelMail { 
+  grid-area: LabelMail; 
 }
 
-#Bild6 { 
-  grid-area: Bild6; 
+#InputMail { 
+  grid-area: InputMail; 
 }
 
-#Bild7 { 
-  grid-area: Bild7; 
+#LabelDatum { 
+  grid-area: LabelDatum; 
 }
 
-#Bild8 { 
-  grid-area: Bild8; 
+#InputDatum { 
+  grid-area: InputDatum;
+  width: 110px; 
 }
 
-#Bild9 { 
-  grid-area: Bild9; 
+#LabelAnliegen { 
+  grid-area: LabelAnliegen; 
 }
 
-#Bild10 { 
-  grid-area: Bild10; 
+#InputAnliegen { 
+  grid-area: InputAnliegen; 
 }
 
-#Bild11 { 
-  grid-area: Bild11; 
+#Buttons { 
+  grid-area: Buttons; 
+  justify-self: center;
 }
 
-#Bild12 { 
-  grid-area: Bild12; 
+#Buttons input{
+  padding: 2%;
 }
+
+#Gallerie{
+  min-height: 98vw;
+}
+
+#Gallerie img{
+  border-radius: 5px;
+}
+
+#BilderGallerieGrid {  
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:  100%;
+}
+
 
 #gridtext{
   grid-area: Text;
@@ -218,7 +289,7 @@ nav li{
 }
 #gridvideo{
   grid-area: Video;
-  margin-left: 50%; 
+  margin-left: 40%; 
 }
 
 #gridvideo video{
