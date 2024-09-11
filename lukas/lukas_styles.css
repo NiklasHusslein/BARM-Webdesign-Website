@@ -35,7 +35,9 @@ h3{
 }
 
 p{
+  font-size: 1.1em;
   font-family: "Manrope", sans-serif;
+  line-height: 1.8em;
   margin-bottom: 0.4em;
 }
 
@@ -78,13 +80,35 @@ a:hover, a:focus{
 	color:#1FCBC4;
 }
 
+nav {
+  background: #020606;
+  background: linear-gradient(90deg,#020606 0%, #091b1b 60%, #0C2423 100%);
+  color: #FFF;
+  padding: 35px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav ul{
+  padding-top: 10px; 
+  text-align: right;
+  margin-right: 10%;
+}
+
+nav li{
+  list-style-type: none;
+  display: inline;
+  margin-left: 9em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
 /* Class-selectors */
 
 .background{
-  /*background-color: #020606;
   background-attachment: fixed; 
   background-repeat: no-repeat;
-  background-size: cover;*/
+  background-size: cover;
   min-height: 100px;
 }
 .background p{
@@ -93,22 +117,115 @@ a:hover, a:focus{
 }
 
 .foreground{
-  background-color: rgba(255, 255, 255, 0.952);
+  background-color: rgba(255, 255, 255, 1);
   padding: 2em 12em;
-  box-shadow: 0px -70px 300px #020606;
-  box-shadow: 0px 70px 300px #020606;
+  box-shadow: 0px -70px 300px #000;
+  box-shadow: 0px 70px 300px #000;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.gridtext{
-  grid-area: Text;
-}
-.gridvideo{
-  grid-area: Video;
-  margin-left: 40%;
+.GallerieGridBild{
+  box-shadow: 0px 0px 10px #000;
+  border-radius: 10px;
+  padding: 2%;
+  
 }
 
+.GallerieGridBild img{
+  width:98%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+  height: 98%;
+}
+
+.GallerieGridBild figcaption{
+  font-size: 1.2em;
+  font-weight: bold;
+}
 
 /* ID-selectors*/
+#Gallerie{
+  min-height: 400px;
+}
+
+#BilderGallerieGrid {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20% 2%;
+  grid-auto-flow: row;
+  justify-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-areas:
+    "Bild1 Bild2 Bild3 Bild4"
+    "Bild5 Bild6 Bild7 Bild8"
+    "Bild9 Bild10 Bild11 Bild12";
+}
+
+#Bild1 { 
+  grid-area: Bild1; 
+}
+
+#Bild2 { 
+  grid-area: Bild2; 
+}
+
+#Bild3 { 
+  grid-area: Bild3; 
+}
+
+#Bild4 { 
+  grid-area: Bild4; 
+}
+
+#Bild5 { 
+  grid-area: Bild5; 
+}
+
+#Bild6 { 
+  grid-area: Bild6; 
+}
+
+#Bild7 { 
+  grid-area: Bild7; 
+}
+
+#Bild8 { 
+  grid-area: Bild8; 
+}
+
+#Bild9 { 
+  grid-area: Bild9; 
+}
+
+#Bild10 { 
+  grid-area: Bild10; 
+}
+
+#Bild11 { 
+  grid-area: Bild11; 
+}
+
+#Bild12 { 
+  grid-area: Bild12; 
+}
+
+#gridtext{
+  grid-area: Text;
+  margin-top: 10%;
+}
+#gridvideo{
+  grid-area: Video;
+  margin-left: 50%; 
+}
+
+#gridvideo video{
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+}
+
 #welcome{
   background-color: rgba(29, 124, 120, 45%);
   border: 10px solid rgba(2, 6, 5, 15%);
@@ -128,7 +245,6 @@ a:hover, a:focus{
 }
 
 #startcontent{
-  
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
   grid-template-rows: 1fr; 
@@ -138,42 +254,23 @@ a:hover, a:focus{
 }
 
 #backgroundImage1{
-  /*background-image: url("assets/pictures/HintergrundTitel_1747_1280.jpg");*/
+  background-image: url("assets/pictures/Hintergrund1_1747_1280.jpg");
   height: 850px;
+}
+
+#backgroundImage2{
+  background-image: url("assets/pictures/Hintergrund2_1280_779.JPEG");
+  height: 300px;
+}
+
+#backgroundImage3{
+  background-image: url("assets/pictures/Hintergrund3_1280_957.JPEG");
+  height: 300px;
 }
 
 #wrapper{
   margin-top: 0;
   width: 100%;
-  
-  background-attachment: fixed; 
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 50px;
-  background-image: url("assets/pictures/HintergrundTitel_1747_1280.jpg");
-}
-
-#navbar{
-  background: #020606;
-  background: linear-gradient(90deg,#020606 0%, #091b1b 60%, #0C2423 100%);
-  color: #FFF;
-  padding: 35px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-#navbar ul{
-  margin-left: 50%;
-  padding-top: 10px;
-}
-
-#navbar li{
-  list-style-type: none;
-  display: inline;
-  margin-right: 9em;
-  font-size: 1.2em;
-  font-weight: bold;
 }
 
 #logocanvas{
