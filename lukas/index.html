@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-
-<!--Notizen
-
-- Video Thumbnail 
-
--->
-
 <head>
     <meta name="author" content="Lukas Horn">
     <title>NonStopAperture</title>
@@ -15,22 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <nav>
-        <canvas id="logocanvas" width="160" height="80"> Logo NonStopAperture </canvas>
-        <script src="canvasscript.js"></script>
-        <h1 id="headline">NonStopAperture</h1>
+        <a href="#" id="MainLogoLink">
+            <canvas id="logocanvas" width="160" height="80"> Logo NonStopAperture </canvas>
+            <script src="canvasscript.js"></script>
+            <h1 id="headline">NonStopAperture</h1>
+        </a>
         <ul>                
             <li>
-                <a href="">Einführung</a>
+                <a href="#startcontent">Einführung</a>
             </li>
             <li>
-                <a href="">Gallerie</a>
+                <a href="#Gallerie">Gallerie</a>
             </li>
             <li>
-                <a href="">Kontakt</a>
+                <a href="#foregroundform">Kontakt</a>
             </li>
         </ul>
         <div class="clearfix"></div>
@@ -45,7 +43,7 @@
         </div>
         <section class="foreground" id="startcontent">
             <div id="gridtext">
-                <h1>Sie sind auf der Suche nach einem Fotografen?</h1>
+                <h2>Sie sind auf der Suche nach einem Fotografen?</h2>
                 <p> Willkommen bei NonStopAperture – ich bin Lukas Horn, Fotograf mit einer Leidenschaft für einzigartige Momente und Geschichten. 
                     Unter meinem Alias widme ich mich der Kunst, Menschen in Porträts lebendig werden zu lassen, 
                     die Energie von Theateraufführungen festzuhalten und besondere Augenblicke auf Events zu verewigen. 
@@ -67,99 +65,99 @@
         <section class="foreground" id="Gallerie">
             <h1>Gallerie</h1>
             <div id="BilderGallerieGrid">
-                <div id="Bild1">
+                <div id="Bild1" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                         <img src="assets/pictures/placeholder" alt="GB" >
+                         <img src="assets/pictures/GallerieBild_1280_1920_1.JPEG" alt="GB" height="450" width="300">
                          <figcaption>
-                            x
+                            "Lucky"
                          </figcaption>
                     </figure>
                 </div>
-                <div id="Bild2">
+                <div id="Bild2" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_2.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Das zwei Königinnen Problem
                         </figcaption>
                    </figure>
                 </div>
-                <div id="Bild3" >
+                <div id="Bild3" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_3.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Die Kathedrale
                         </figcaption>
                    </figure>
                 </div>
-                <div id="Bild4" >
+                <div id="Bild4" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_4.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Rechtsstreit der Stuart
                         </figcaption>
                    </figure>
                 </div>
-                <div id="Bild5">
+                <div id="Bild5" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_5.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Griechische Schritte
                         </figcaption>
                    </figure>
                 </div>
-                <div id="Bild6">
+                <div id="Bild6" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_6.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Subway Surfer
                         </figcaption>
                    </figure>
                 </div>
-                <div id="Bild7">
+                <div id="Bild7" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_7.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Der Ruf der See
                         </figcaption>
                    </figure>
                 </div>
-                <div id="Bild8">
+                <div id="Bild8" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_8.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Rafting!
                         </figcaption>
                    </figure>
                 </div>
-                <div id="Bild9">
+                <div id="Bild9" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_9.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Chad (Not the Country)
                         </figcaption>
                    </figure>
                 </div>
-                <div id="Bild10">
+                <div id="Bild10" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_10.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Statement
                         </figcaption>
                    </figure>
                 </div>
-                <div id="Bild11"> 
+                <div id="Bild11" class="GallerieBildgroup"> 
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_11.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Lichtermeer
                         </figcaption>
                    </figure>
                 </div>
-                <div id="Bild12">
+                <div id="Bild12" class="GallerieBildgroup">
                     <figure class="GallerieGridBild">
-                        <img src="assets/pictures/placeholder" alt="GB">
+                        <img src="assets/pictures/GallerieBild_1280_1920_12.JPEG" alt="GB" height="450" width="300">
                         <figcaption>
-                           x
+                           Neue Horizonte
                         </figcaption>
                    </figure>
                 </div>
@@ -170,16 +168,57 @@
             
 
         </div>
-
-        <section class="foreground">
+        <script>
+            function play(){
+                var audio = document.getElementById("submitaudio");
+                audio.play()
+            }
+            
+        </script>
+        <section class="foreground" id="foregroundform">
             <h1>Kontakt</h1>
-
+            <form>
+                <div id="Kontaktformular">
+                    <div id="LabelName">
+                        <label>Name</label>
+                    </div>
+                    <div id="InputName">
+                        <input type="text" class="FormInput">
+                    </div>
+                    <div id="LabelMail">
+                        <label>E-Mail Adresse</label>
+                    </div>
+                    <div id="InputMail">
+                        <input type="email" class="FormInput">
+                    </div>
+                    <div id="LabelDatum">
+                        <label>Voraussichtliches Datum</label>
+                    </div>
+                    <div id="InputDatum">
+                        <input type="date" class="FormInput">
+                    </div>
+                    <div id="LabelAnliegen">
+                        <label>Anliegen</label>
+                    </div>
+                    <div id="InputAnliegen">
+                        <textarea rows="10" class="FormInput" id="FormAnliegen" placeholder="Bitte formulieren Sie Ihren Wunsch möglichst genau"></textarea>
+                    </div>
+                    <div id="Buttons"> 
+                        <input type="reset" value="Kontakt Aufnehmen" id="Kontaktaufnahme" onclick="play()"> <!-- Im Rahmen der Prüfungsleistung nicht umsetzbar / Ziel wäre eigentlich die Anfrage per Mail zu senden in diesem Fall wird das Formular nur gecleart-->
+                        <audio  id="submitaudio">
+                            <source src="assets/audio/Recording.mp3" type="audio/mp3">
+				            <source src="assets/audio/Recording.ogg" type="audio/ogg">	
+                            <source src="assets/audio/Recording.wav" type="audio/wav">	
+                        </audio>
+                    </div>
+                </div>
+            </form>
+            <a href="assets/PDF/Preisgestaltung_NonStopAperture.pdf" download><img id="DownloadPDF" src="assets/SVG/svg_PDF_Download.svg" alt="Preisgestaltung" width="300" height="100"/></a>
         </section>
 
     </div>
     <footer>
-        
-        <a href="https://www.instagram.com/nonstopaperture"><img id="footer_INSTAGRAM" src="assets/pictures/Instagram_Glyph_White.svg" alt="Logo Instagram" width="25" height="25"/>  Non-Stop-Aperture</a>
+        <a href="https://www.instagram.com/nonstopaperture"><img id="footer_INSTAGRAM" src="assets/SVG/Instagram_Glyph_White.svg" alt="Logo Instagram" width="25" height="25"/>  Non-Stop-Aperture</a>
     </footer>
 
 </body>
