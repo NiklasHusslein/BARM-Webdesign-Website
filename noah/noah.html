@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flughafen Frankfurt</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-liste">
+          <li><a href="#geschichte">Geschichte</a></li>
+          <li><a href="#fakten">Fakten</a></li>
+          <li><a href="#zukunft">Zukunft</a></li>
+          <li><a href="#eindruecke">Eindrücke</a></li>
+        </ul>
+      </nav>
+
+      <object
+        id="logo"
+        type="image/svg+xml"
+        data="assets/FRA_Logo_RGB.svg"
+        width="128.273"
+        height="70.39"
+      ></object>
+
+      <canvas id="airplaneCanvas" width="150" height="100"></canvas>
+
+      <script>
+        var canvas = document.getElementById("airplaneCanvas");
+        var plane = canvas.getContext("2d");
+
+        plane.beginPath();
+        plane.moveTo(10, 10);
+        plane.lineTo(10, 50);
+        plane.lineTo(60, 50);
+        plane.lineTo(70, 80);
+        plane.lineTo(80, 50);
+        plane.lineTo(110, 50);
+        plane.lineTo(130, 40);
+        plane.lineTo(110, 30);
+        plane.lineTo(80, 30);
+        plane.lineTo(70, 10);
+        plane.lineTo(60, 30);
+        plane.lineTo(30, 30);
+        plane.closePath();
+        plane.stroke();
+        plane.strokeStyle = "#FFFFFF";
+        plane.stroke();
+      </script>
+    </header>
+
+    <div id="wrapper">
+      <main>
+        <article id="geschichte">
+          <h2>Geschichte</h2>
+          <div id="geschichte_content">
+            <div id="geschichte_bild">
+              <img
+                src="assets/FOT0001773.jpg"
+                width="569"
+                height="322"
+                alt="Archivbild aus dem Jahr 1954"
+              />
+            </div>
+            <p id="geschichte_text">
+              Der Flughafen Frankfurt, ursprünglich als
+              <b>Fliegerhorst Frankfurt-Rebstock</b> bekannt, wurde
+              <b>1936 eröffnet</b> und spielte in den frühen Jahren eine
+              wichtige Rolle als militärischer Flughafen der Luftwaffe. Im
+              Zweiten Weltkrieg wurde der Flughafen stark beschädigt, aber nach
+              Kriegsende übernahmen die amerikanischen Besatzungstruppen das
+              Gelände und begannen mit dem Wiederaufbau. In den
+              <b>1950er Jahren</b> wurde der Flughafen Frankfurt zunehmend für
+              den <b>zivilen Luftverkehr</b> genutzt. Der Flughafen verlegte
+              seine Hauptaktivitäten vom Rebstockgelände zum heutigen Standort,
+              dem Rhein-Main-Flughafen, der auf dem Gelände des
+              <b>ehemaligen Luftschiffhafens</b> errichtet wurde. Der Ausbau des
+              Flughafens, insbesondere mit der
+              <b>Eröffnung der Startbahn West im Jahr 1984</b>, machte ihn zum
+              <b>zentralen Luftverkehrsdrehkreuz Deutschlands</b>. Die
+              Geschichte des Flughafens ist geprägt von kontinuierlichem
+              Wachstum und zahlreichen Erweiterungen, die ihn zu einem der
+              verkehrsreichsten Flughäfen Europas machten.
+            </p>
+          </div>
+        </article>
+
+        <article id="fakten">
+          <h2>Fakten</h2>
+          <div id="fakten_content">
+            <div id="fakten_text">
+              <ul class="fakten_liste">
+                <li>
+                  Standort: Der Flughafen liegt etwa 12 Kilometer südwestlich
+                  der Frankfurter Innenstadt und erstreckt sich über die Städte
+                  Frankfurt, Rüsselsheim und Mörfelden-Walldorf
+                </li>
+                <li>
+                  Passagieraufkommen: Der Flughafen Frankfurt ist einer der
+                  verkehrsreichsten Flughäfen in Europa mit über 70 Millionen
+                  Passagieren jährlich (Stand vor der Pandemie)
+                </li>
+                <li>
+                  Start- und Landebahnen: Der Flughafen verfügt über vier Start-
+                  und Landebahnen, die unabhängig voneinander genutzt werden
+                  können
+                </li>
+                <li>
+                  Fluggesellschaften: Über 100 Fluggesellschaften bedienen den
+                  Flughafen Frankfurt und bieten Flüge zu mehr als 300 Zielen
+                  weltweit an
+                </li>
+                <li>
+                  Terminalgebäude: Der Flughafen hat zwei Hauptterminals
+                  (Terminal 1 und Terminal 2) und ein Satellitenterminal
+                  (Terminal 3 ist im Bau)
+                </li>
+                <li>
+                  Frachtaufkommen: Der Flughafen Frankfurt ist eines der größten
+                  Frachtzentren Europas und wickelt jährlich über 2 Millionen
+                  Tonnen Fracht ab
+                </li>
+                <li>
+                  Arbeitsplätze: Der Flughafen ist einer der größten Arbeitgeber
+                  in der Region und bietet direkt und indirekt über 80.000
+                  Arbeitsplätze
+                </li>
+                <li>
+                  Verkehrsanbindung: Der Flughafen ist hervorragend an das
+                  Verkehrsnetz angebunden, mit eigenem Fernbahnhof,
+                  Regionalbahnhof und Zugang zu den Autobahnen A3 und A5
+                </li>
+              </ul>
+            </div>
+            <div id="fakten_bild">
+              <img
+                src="assets/Skylineblick.jpg"
+                width="600"
+                height="900"
+                alt="Luftaufnahme über das Rollfeld in Richtung der Skyline von Frankfurt am Main."
+              />
+            </div>
+          </div>
+        </article>
+
+        <article id="zukunft">
+          <h2>Zukunft</h2>
+          <div class="zukunft_content">
+            <div id="zukunft_bild">
+              <img
+                src="assets/reb_20230711_0360.jpg"
+                width="597"
+                height="332"
+                alt="Luftaufnahme des im Bau befindlichen Terminal 3 im Süden des Frankfurter Flughafens"
+              />
+            </div>
+            <p id="zukunft_text">
+              Die Zukunft des Frankfurter Flughafens steht im Zeichen von
+              <b>Wachstum und Modernisierung</b>. Mit dem Bau des neuen
+              <b>Terminal 3</b>, das
+              <b>voraussichtlich 2026 vollständig in Betrieb</b> genommen wird,
+              plant der Flughafen, seine Kapazitäten erheblich zu erweitern, um
+              den steigenden Passagierzahlen gerecht zu werden. Zudem investiert
+              der Flughafen in
+              <b>Nachhaltigkeit und innovative Technologien</b>, darunter den
+              Ausbau von Elektroinfrastruktur für Flugzeuge und Bodenfahrzeuge
+              sowie die Erhöhung der Energieeffizienz in seinen Anlagen. Der
+              Flughafen Frankfurt strebt an, seine Position als eines der
+              <b>führenden internationalen Drehkreuze</b> zu festigen, während
+              er gleichzeitig seine
+              <b>ökologischen Fußabdrücke minimiert</b> und den Anforderungen
+              einer sich wandelnden Luftverkehrsbranche gerecht wird.
+            </p>
+          </div>
+        </article>
+
+        <article id="eindruecke">
+          <h2>Eindrücke</h2>
+          <p>Im Folgenden finden sich Eindrücke des Frankfurter Flughafens.</p>
+          <div class="eindruecke_sicherheitshinweis">
+            <p>Bitte hören Sie sich vorher den Sicherheitshinweis an:</p>
+            <audio controls>
+              <source src="assets/sicherheitshinweis.mp3" type="audio/mpeg" />
+              <source src="assets/sicherheitshinweis.ogg" type="audio/ogg" />
+              <source src="assets/sicherheitshinweis.wav" type="audio/wav" />
+              Dein Browser unterstützt das Audio-Element leider nicht.
+            </audio>
+          </div>
+          <div class="eindruecke_content">
+            <img
+              id="ueberblick"
+              src="assets/AM_07_2023__M__1482.jpg"
+              width="500"
+              height="334"
+              alt="Luftaufnahme der Center- und Südstart- bzw. Landebahn"
+            />
+            <img
+              id="luftaufnahmet1"
+              src="assets/reb_20230711_0406.jpg"
+              width="500"
+              height="334"
+              alt="Luftaufnahme des Terminal 1"
+            />
+            <img
+              id="einchecken"
+              src="assets/CC_03_2023_025.jpg"
+              width="500"
+              height="334"
+              alt="Passagier beim Self Baggage Drop Off der Lufthansa im Terminal 1"
+            />
+            <img
+              id="terminal1"
+              src="assets/reb_20230928_1845.jpg"
+              width="500"
+              height="334"
+              alt="Aufnahme in Richtung Fallblattafel innerhalb der Check-In Halle A des Terminal 1"
+            />
+            <img
+              id="terminal2"
+              src="assets/reb_20190630004.jpg"
+              width="500"
+              height="334"
+              alt="Aufnahme von oben herab auf eine gut gefüllte Check-In Halle des Terminal 2"
+            />
+            <img
+              id="sonnenuntergangtower"
+              src="assets/AM_10_2023__M__2730.jpg"
+              width="500"
+              height="334"
+              alt="Bild des Vorfeldes bei Sonnenuntergang hinter dem Tower der Flugsicherung"
+            />
+            <video width="501" height="282" controls>
+              <source src="assets/party.mov" type="video/mp4" />
+              <source src="assets/party.ogv" type="video/ogg" />
+              <source src="assets/party.webm" type="video/webm" />
+              Schwenk von einem Flugzeug zu einer feiernden Menge Menschen auf
+              der Besucherterasse des Terminal 2.
+            </video>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 500 300"
+              width="500"
+              height="300"
+            >
+              <rect width="100%" height="100%" fill="#87CEEB" />
+
+              <rect x="0" y="250" width="500" height="50" fill="#A9A9A9" />
+
+              <rect
+                x="100"
+                y="180"
+                width="150"
+                height="30"
+                fill="#fff"
+                stroke="black"
+                stroke-width="2"
+              />
+
+              <polygon
+                points="250,180 270,195 250,210"
+                fill="#fff"
+                stroke="black"
+                stroke-width="2"
+              />
+
+              <circle cx="120" cy="235" r="8" fill="black" />
+              <circle cx="210" cy="235" r="8" fill="black" />
+
+              <polygon
+                points="200,180 90,140 60,140 100,180"
+                fill="#fff"
+                stroke="black"
+                stroke-width="2"
+              />
+
+              <polygon
+                points="200,210 90,250 60,250 100,210"
+                fill="#fff"
+                stroke="black"
+                stroke-width="2"
+              />
+
+              <polygon
+                points="100,180 80,160 80,210 100,210"
+                fill="#fff"
+                stroke="black"
+                stroke-width="2"
+              />
+
+              <line
+                x1="50"
+                y1="270"
+                x2="100"
+                y2="270"
+                stroke="white"
+                stroke-width="5"
+              />
+              <line
+                x1="150"
+                y1="270"
+                x2="200"
+                y2="270"
+                stroke="white"
+                stroke-width="5"
+              />
+              <line
+                x1="250"
+                y1="270"
+                x2="300"
+                y2="270"
+                stroke="white"
+                stroke-width="5"
+              />
+              <line
+                x1="350"
+                y1="270"
+                x2="400"
+                y2="270"
+                stroke="white"
+                stroke-width="5"
+              />
+
+              <circle cx="450" cy="50" r="30" fill="yellow" />
+            </svg>
+            <img
+              id="spaßamairport"
+              src="assets/spaßamairport.jpg"
+              width="500"
+              height="334"
+              alt="Foto einer Freundesgruppe auf einer Afterwork Veranstaltung am Flughafen"
+            />
+          </div>
+          <p>
+            Außerdem findet sich in folgendem Dokument eine schöne Geschichte
+            eines Kindes, welches mit seinem Onkel den Flughafen besucht:
+            <a
+              href="assets/Die_Abenteuer_von_Charlie_am_Flughafen.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >PDF herunterladen</a
+            >
+          </p>
+        </article>
+      </main>
+
+      <footer></footer>
+    </div>
+  </body>
+</html>
