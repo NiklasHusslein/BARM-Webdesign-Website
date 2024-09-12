@@ -12,16 +12,19 @@ ligthest      RGB 1FCBC4
 	padding:0;
 	margin:0;
 }
+/*Allgemeines*/
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 106px;
+}
+body {
+  background-color:#FFF;
 }
 
 /* Element-selectors */
 h1, h2, h3, p, label, a, input{
   font-family: "Manrope", sans-serif;
 }
-
 
 h1{
   font-size:1.6em;
@@ -40,9 +43,51 @@ h3{
 }
 
 p{
-  font-size: 1.1em;
-  line-height: 1.8em;
+  font-size: 1.2em;
+  line-height: 2em;
   margin-bottom: 0.4em;
+}
+
+a{
+  text-decoration:none;
+}
+a:link{
+  color:#fff;
+}
+a:visited{
+  color:#fff;
+}
+
+figcaption{
+  font-size: 2.1em;
+  font-weight: 550;
+  font-family: "Kolker Brush", cursive;
+}
+
+nav { 
+  background: #020606;
+  background: linear-gradient(90deg,#020606 0%, #091b1b 60%, #0C2423 100%);
+  color: #FFF;
+  padding: 35px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 4vh;
+}
+
+nav ul{
+  padding-top: 10px; 
+  text-align: right;
+  margin-right: 10em;
+}
+
+nav li{
+  list-style-type: none;
+  display: inline;
+  margin-left: 7em;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 section{
@@ -63,65 +108,17 @@ footer img{
   right: 6px;
 }
 
-
-body {
-  background-color:#FFF;
-}
-
-a{
-  text-decoration:none;
-}
-a:link{
-  color:#fff;
-}
-a:visited{
-  color:#fff;
-}
-
-
-nav { 
-  background: #020606;
-  background: linear-gradient(90deg,#020606 0%, #091b1b 60%, #0C2423 100%);
-  color: #FFF;
-  padding: 35px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-nav ul{
-  padding-top: 10px; 
-  text-align: right;
-  margin-right: 10%;
-}
-
-nav li{
-  list-style-type: none;
-  display: inline;
-  margin-left: 9em;
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-
-
-
 /* Class-selectors */
 
 .background{
   background-attachment: fixed; 
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100px; /*VW anpassen*/
-}
-.background p{
-  color: #FFF;
-  text-align: center;
 }
 
 .foreground{
   background-color: rgba(255, 255, 255, 1);
-  padding: 2% 6%;
+  padding: 2% 50px;
   box-shadow: 0px 0 200px #000;
   border-radius: 5px;
   text-align: center;
@@ -130,21 +127,37 @@ nav li{
 .foreground h1 {
   font-size: 2.4em;
 }
+
 .foreground h2 {
   font-size: 1.6em;
 }
 
-.GallerieGridBild{
-  box-shadow: 0px 0px 10px #000;
-  border-radius: 10px;
-  padding: 8px;
-  
+.GallerieObjekt{
+  width: 416px;
+  margin: 0.7%;
+  transition: transform 2s;
 }
 
-.GallerieGridBild figcaption{
-  font-size: 2.1em;
-  font-weight: 550;
-  font-family: "Kolker Brush", cursive;
+.GallerieBild{
+  box-shadow: 0px 0px 10px #000;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.GallerieObjekt img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.GallerieObjekt :hover{
+  background-color: #FFF;
+  transform: scale(1.1);
+}
+
+.GallerieObjekt img:hover{
+  transform: scale(1);
 }
 
 .FormInput{
@@ -155,37 +168,109 @@ nav li{
   box-shadow: 0 0 2px #6d6a6a;
 }
 
-.GallerieBildgroup{
-  max-width: 20%;
-  margin: 0.7%;
-  transition: transform 2s;
-}
-.GallerieBildgroup :hover{
-  background-color: #FFF;
-  transform: scale(1.1);
-}
-.GallerieBildgroup img:hover{
-  transform: scale(1);
-}
-
-.GallerieBildgroup img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 /* ID-selectors*/
 
+  /*Navigation*/
 
-#FormAnliegen{
-  height: 5em;
-  resize: none;
+#logocanvas{
+  margin-top: -25px;
+  float: left;
+  margin-right:1.2em ;
 }
 
-
-#foregroundform{
-  min-height: 400px;
+#headline{
+  float: left;
 }
+
+  /*Wrapper*/
+
+#wrapper{
+  margin-top: 0;
+  width: 100%;
+}
+
+  /*Wilkommenssektion*/
+
+#backgroundImage1{
+  background-image: url("assets/pictures/Hintergrund1_1747_1280.jpg");
+  height: 100vh;
+}
+
+#welcome{
+  background-color: rgba(29, 124, 120, 45%);
+  border: 10px solid rgba(2, 6, 5, 15%);
+  width: 30%;
+  position: absolute;
+  left: 35%;
+  top: 32%;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.5em;
+}
+
+#welcome h2{
+  font-size: 4.5em;
+  margin-bottom: 0.3em;
+}
+
+#welcome h3{
+  font-size: 1.9em;
+  margin-bottom: 0.3em;
+}
+
+  /*Erste Sektion Inhalt Willkommen*/
+
+#startcontent{ 
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  align-items: center;
+  justify-items: center;
+  grid-template-areas: 
+    "Text Text Text Video Video"; 
+}
+
+#gridtext{
+  grid-area: Text;
+  max-width: 1500px;
+}
+
+#gridvideo{
+  grid-area: Video;
+  margin-left: 40%; 
+}
+
+#gridvideo video{
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+}
+
+  /*Trennsektion 1*/
+
+#backgroundImage2{
+  background-image: url("assets/pictures/Hintergrund2_1280_779.JPEG");
+  height: 35vh;
+}
+
+  /*Galleriesektion*/
+
+#FlexGallerie {  
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+  /*Trennsektion 2*/
+
+#backgroundImage3{
+  background-image: url("assets/pictures/Hintergrund3_1280_957.JPEG");
+  height: 35vh;
+}
+
+  /*Kontaktsektion*/
 
 #Kontaktformular {  
   display: grid;
@@ -207,7 +292,7 @@ nav li{
   font-weight: bold;
 }
 
-#Kontaktaufnahme{
+#Kontaktaufnahme{ /*form*/
   border: #6d6a6a solid 1px;
   box-shadow: 0 0 2px #6d6a6a;
   border-radius: 10px;
@@ -218,6 +303,13 @@ nav li{
   font-size: 1.3em;
 }
 
+    /*Form Funktionalität*/
+
+#FormAnliegen{ /*Inputs*/
+  height: 5em;
+  resize: none;
+}
+
 #LabelName { 
   grid-area: LabelName; 
 }
@@ -226,8 +318,7 @@ nav li{
   margin-top: 30px;
 }
 
-
-
+    /*Grid Zuordnung [Basis: grid.layoutit.com]*/
 #InputName { 
   grid-area: InputName; 
 }
@@ -262,94 +353,16 @@ nav li{
   justify-self: center;
 }
 
-#Buttons input{
-  padding: 2%;
-}
-
-#Gallerie{
-  min-height: 98vw;
-}
-
-#Gallerie img{
-  border-radius: 5px;
-}
-
-#BilderGallerieGrid {  
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width:  100%;
-}
 
 
-#gridtext{
-  grid-area: Text;
-  margin-top: 10%;
-}
-#gridvideo{
-  grid-area: Video;
-  margin-left: 40%; 
-}
 
-#gridvideo video{
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px #000;
-}
 
-#welcome{
-  background-color: rgba(29, 124, 120, 45%);
-  border: 10px solid rgba(2, 6, 5, 15%);
-  width: 30%;
-  position: absolute;
-  left: 35%;
-  top: 32%;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  padding: 1.5em;
-}
 
-#welcome h1{
-  font-size: 4em;
-  margin-bottom: 0.3em;
-}
 
-#startcontent{
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "Text Text Text Video Video"; 
-}
 
-#backgroundImage1{
-  background-image: url("assets/pictures/Hintergrund1_1747_1280.jpg");
-  height: 850px;
-}
 
-#backgroundImage2{
-  background-image: url("assets/pictures/Hintergrund2_1280_779.JPEG");
-  height: 300px;
-}
 
-#backgroundImage3{
-  background-image: url("assets/pictures/Hintergrund3_1280_957.JPEG");
-  height: 300px;
-}
 
-#wrapper{
-  margin-top: 0;
-  width: 100%;
-}
 
-#logocanvas{
-  margin-top: -25px;
-  float: left;
-  margin-right:1.2em ;
-}
 
-#headline{
-  float: left;
-}
+
