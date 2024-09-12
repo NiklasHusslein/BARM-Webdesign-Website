@@ -1,30 +1,30 @@
 /* Gloable Stile */
 html {
-  scroll-padding-top: 92px;
+  scroll-padding-top: 92px; /* Abstand oben beim Scrollen, sodass der Inhalt nicht unter der Navigation verschwindet*/
   scroll-behavior: smooth;
 }
 
 head,
 body {
-  overflow-x: hidden;
+  overflow-x: hidden; /* Verhindert horizontales Scrollen */
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Italiana", cursive;
+  font-family: "Italiana", cursive; /* Gloable Schriftart + generische Schriftart */
 }
 
 p {
   font-size: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.6; /* Zeilenabstand */
   font-weight: bold;
 }
 
 /* Struktur-Elemente */
 #wrapper {
-  display: flex;
-  width: 100%;
+  display: flex; /* Flexbox zur horizontalen Anordnung der Flaggenbereiche */
+  width: 100%; /* Volle Breite des Viewports */
 }
 
 #flag-green-box {
@@ -42,52 +42,35 @@ p {
 }
 
 #content {
-  padding-inline: 40px;
-  margin-top: 92px;
-  margin-bottom: 40px;
+  padding-inline: 40px; /* Links und rechts 40px Abstand */
+  margin-top: 92px; /* Platz für den fixierten Header */
+  margin-bottom: 40px; /* Abstand zum unteren Rand */
 }
 
 /* Header und Navigation */
 #header {
-  display: flex;
-  align-items: center;
-  position: fixed;
+  display: flex; /* Flexbox zur Anordnung */
+  align-items: center; /* vertikale Ausrichtung der Elemente */
+  position: fixed; /* fixiert den Header oben auf der Seite */
   top: 0;
-  width: 70%;
-  left: 15%;
-  background-color: white;
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 0;
+  width: 70%; /* gleiche Breite wie #flag-white-box */
+  left: 15%; /* Abstand nach links */
+  background-color: #fff;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1); /* Schatten für den abgesetzten Look */
+  padding: 0.5rem 0; /* vertikaler Abstand */
   z-index: 100; /* Einmalige Verwendung, sodass die Elemente mit Transform-Eigenschaft im Scroll-Event nicht über die Nav-Leiste hovern. */
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  justify-content: space-between; /*gleichmäßige Verteilung der Elemente */
+  align-items: center; /* Vertikale Ausrichtung */
+  gap: 20px; /* Abstand zwischen den Navigationslinks */
   width: 100%;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-#logo {
-  padding: 5px 20px;
-}
-
-#titel a {
-  font-size: 3rem;
-  margin-right: auto;
-  font-family: "Italianno", cursive;
-  text-decoration: none; /* Entfernung der Standard-Unterstreichung bei Links */
-  color: inherit;
-}
-
 nav ul {
-  list-style-type: none;
+  list-style-type: none; /* entfernt die Standard-Aufzählungszeichen */
   padding: 0;
   margin: 0;
   display: flex;
@@ -95,7 +78,7 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-block;
+  display: inline-block; /* Links werden in einer Zeile dargestellt */
 }
 
 nav ul li #titel {
@@ -109,19 +92,36 @@ nav a {
   color: #555;
   font-weight: bold;
   padding: 5px 15px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* weicher Übergang der Link-Farbe beim Hover */
 }
 
 nav a:hover {
   color: #000;
-  text-decoration: underline;
+  text-decoration: underline; /* Barrierearmut: unterstreicht den Link beim Hover und die Schriftfarbe wird schwarz */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  padding: 5px 20px;
+}
+
+#titel a {
+  font-size: 3rem;
+  margin-right: auto; /* schiebt den Titel nach links */
+  font-family: "Italianno", cursive;
+  text-decoration: none; /* Entfernung der Standard-Unterstreichung bei Links */
+  color: inherit; /* übernimmt schwarz */
 }
 
 /* article styles */
 article h1,
 article h2 {
   text-shadow: #aaa 2px 2px 4px;
-  margin: 40px 0;
+  margin: 40px 0; /* Abstand oben und unten */
 }
 
 article h1 {
@@ -139,15 +139,15 @@ article h3 {
 }
 
 .container-style {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Schatten für visuelle Abtrennung */
+  border-radius: 15px; /* Runde Ecken */
 }
 
 /* article: einleitung */
 .einleitung-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Zentrierung */
   height: 350px;
   flex: 1;
   padding: 15px;
@@ -171,7 +171,7 @@ article h3 {
 /* article: architektur */
 .architektur-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* gleichmäßge Verteilung zwischen den Elementen */
   align-items: center;
   gap: 30px;
   padding: 15px;
@@ -191,14 +191,14 @@ article h3 {
 
 #kirchen {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* vertikale Anordnung: untereinander angezeigt */
   gap: 20px;
 }
 
 /* article: landschaft */
 #landschaft-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-evenly; /* gleichmäßige Verteilung zwischen und um die Elemente */
   align-items: center;
   gap: 15px;
 }
@@ -237,7 +237,7 @@ audio {
 }
 
 .audio-info {
-  flex: 1;
+  flex: 1; /* darf den verfügbaren Platz im Flex-Container einnehmen */
   margin-top: 20px;
 }
 
@@ -254,7 +254,7 @@ audio {
 }
 
 .instrument-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Vergrößern um 10% beim Hovern */
 }
 
 /* section: PDF */
@@ -322,19 +322,24 @@ audio {
 }
 
 #pizzaCanvas {
-  width: 100%; /* Das Canvas passt sich der Grid-Item-Größe an */
-  height: 100%; /* Die Höhe wird proportional zur Breite angepasst */
+  width: 100%;
+  height: 100%;
 }
 
 #pizza-container:hover {
   animation: spin 2s linear infinite; /* Endlose 360-Grad-Drehung */
+  /*  spin = Name der Animation,
+      2s = Dauer bis komplette Drehung
+      linear = konstante Geschwindigkeit
+      infinite = endlose Wiederholung
+  */
 }
 
 @keyframes spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Anfangspunkt */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Endpunkt */
   }
 }
