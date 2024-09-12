@@ -56,14 +56,6 @@ nav {
   width: 100%;
 }
 
-footer {
-  background-color: #004080;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
 .nav-liste {
   justify-content: end;
   list-style: none;
