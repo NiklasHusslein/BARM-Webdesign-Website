@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flughafen Frankfurt</title>
     <link rel="icon" type="image/x-icon" href="assets/FRA_Logo_A4_RGB.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="noah_styles.css" />
   </head>
   <body>
     <header>
@@ -27,29 +27,6 @@
       ></object>
 
       <canvas id="airplaneCanvas" width="150" height="100"></canvas>
-
-      <script>
-        var canvas = document.getElementById("airplaneCanvas");
-        var plane = canvas.getContext("2d");
-
-        plane.beginPath();
-        plane.moveTo(10, 10);
-        plane.lineTo(10, 50);
-        plane.lineTo(60, 50);
-        plane.lineTo(70, 80);
-        plane.lineTo(80, 50);
-        plane.lineTo(110, 50);
-        plane.lineTo(130, 40);
-        plane.lineTo(110, 30);
-        plane.lineTo(80, 30);
-        plane.lineTo(70, 10);
-        plane.lineTo(60, 30);
-        plane.lineTo(30, 30);
-        plane.closePath();
-        plane.stroke();
-        plane.strokeStyle = "#FFFFFF";
-        plane.stroke();
-      </script>
     </header>
 
     <div id="wrapper">
@@ -345,5 +322,6 @@
 
       <footer></footer>
     </div>
+    <script src="noah_script.js"></script>
   </body>
 </html>
